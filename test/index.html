@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <title>WebRtc</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="peerjs.min.js"></script>
+    <script src="socket.io.js"></script>
+  </head>
+  <body>
+    <div id="chat-room">
+      <p>User Online:</p>
+      <ul id="id-user"></ul>
+      <h3 id="my-peer">Your Id:</h3>
+      <video id="local-stream" width="300" controls></video>
+      <br />
+      <br />
+      <video id="remote-stream" width="300" controls></video>
+      <br />
+      <br />
+      <input type="text" id="remote-id" placeholder="Remote ID" />
+      <button id="btn-call">Call</button>
+    </div>
+    <div id="sign-up">
+      <br />
+      <br />
+      <input type="text" id="username" placeholder="Remote ID" />
+      <button id="btn-signup">SignUp</button>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
