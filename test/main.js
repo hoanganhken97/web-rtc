@@ -39,12 +39,14 @@ function playStream(idVideoTag, stream) {
 //   playStream("localStream", stream);
 //   console.log(3, stream);
 // });
-
+// const peer = new Peer();
 const peer = new Peer({
-  host: "https://9000-peers-peerjsserver-nm18mnrbf52.ws-us105.gitpod.io/myapp",
-  secure: true,
+  host: "9000-peers-peerjsserver-nm18mnrbf52.ws-us105.gitpod.io",
   port: 9000,
+  path: "/myapp",
+  secure: true,
 });
+
 peer.on("open", (id) => {
   $("#my-peer").append(id);
   $("#btn-signup").click(() => {
